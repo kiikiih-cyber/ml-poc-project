@@ -33,9 +33,19 @@ STREAMLIT_PORT = 8501
 # Students must replace this example with their trained models.
 # Each entry must point to a serialized model saved as `.joblib`, `.pkl`, or `.pickle`.
 MODELS = {
-    "model_a": {
-        "name": "Model A",
-        "description": "A simple baseline model.",
-        "path": MODELS_DIR / "model_a.pkl",
+    "log_reg": {
+        "name": "Logistic Regression",
+        "description": "Modèle baseline avec features normalisées.",
+        "path": MODELS_DIR / "log_reg.joblib",
+    },
+    "random_forest": {
+        "name": "Random Forest",
+        "description": "Ensemble d'arbres de décision, 100 estimateurs.",
+        "path": MODELS_DIR / "random_forest.joblib",
+    },
+    "gradient_boosting": {
+        "name": "Gradient Boosting",
+        "description": "Meilleur modèle — AUC 0.9275, accuracy 95.52%.",
+        "path": MODELS_DIR / "gradient_boosting.joblib",
     },
 }
